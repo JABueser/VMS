@@ -1,0 +1,32 @@
+﻿
+@model vms.Models.VolunteerViewModel
+
+@{
+    ViewData["Title"] = "Manage your Volunteers";
+}
+
+<div class="panel panel-default">
+    <div class="panel-heading">@ViewData["Title"]</div>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <td>&#x2714;</td>
+                <td>FirstName</td>
+                <td>LastName</td>
+            </tr>
+        </thead>
+
+        @foreach (var item in Model.Volunteers)
+        {
+            <tr>
+                <td>
+                    @item.Id
+                </td>
+                <td>@item.FirstName</td>
+                <td>@item.LastName</td>
+            </tr>
+
+        }
+    </table>
+</div>
