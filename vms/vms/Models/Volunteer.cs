@@ -47,6 +47,8 @@ namespace vms.Models
         //[Required]
         public bool IsApproved { get; set; }
         //[Required]
+        public bool IsPending { get; set; }
+        //[Required]
         public bool IsInactive { get; set; }
     }
 }
