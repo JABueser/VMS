@@ -2,14 +2,36 @@
 @model vms.Models.VolunteerViewModel
 
 @{
-    ViewData["Title"] = "Search";
+    ViewData["Title"] = "Manage your Volunteers";
 }
 
-<form asp-controller="Volunteer" asp-action="Search">
+<form asp-controller="Volunteer" asp-action="Search" method="post">
     <p>
         Search: <input type="text" name="LastName" />
-        <input type="submit" value="Id" />
+        <input type="submit" value="Search" />
     </p>
+</form>
+
+<form asp-controller="Volunteer" asp-action="Filter" method="post">
+    @Html.DropDownList("Status", new List<SelectListItem>
+   {
+       new SelectListItem{
+           Text ="Approved/Pending", Value="1"},
+       new SelectListItem
+            {
+                Text = "Approved", Value = "2"},
+        new SelectListItem
+        {
+            Text ="Pending", Value = "3"},
+        new SelectListItem
+        {
+            Text="Disapproved", Value = "4"},
+        new SelectListItem
+        {
+            Text ="Inactive", Value ="5"},
+
+        })
+    <input type="submit" value="Filter" />
 </form>
 
 <div class="panel panel-default">
