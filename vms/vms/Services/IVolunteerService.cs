@@ -9,5 +9,7 @@ namespace vms.Services
     public interface IVolunteerService
     {
         Task<Volunteer[]> GetIncompleteVolunteersAsync();
+
+        //IEnumerable<Volunteer> Volunteers { get; }
     }
 }

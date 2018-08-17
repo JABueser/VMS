@@ -203,7 +203,7 @@ namespace vms.Services
                 IsPending = false,
                 IsInactive = false,
             };
-            return Task.FromResult(new[] { item1, item2 });
+            return Task.FromResult(new[] { item1, item2, item3, item4, item5, item6, item7, item8});
         }
     }
 }
