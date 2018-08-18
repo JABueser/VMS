@@ -14,6 +14,7 @@ namespace vms.Data
             : base(options)
         {
         }
+        public DbSet<Opportunity> Opportunities { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

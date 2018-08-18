@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewData["Title"] = "Edit";
+}
+
+@model Opportunity
+
+<h2>Edit</h2>
+
+<form asp-action="Edit" asp-controller="Opportunity" method="post">
+
+    <label asp-for="Name"> Name: </label>
+    <input asp-for="Name" class="form-control" />
+
+    <label asp-for="Description"> Name: </label>
+    <input asp-for="Description" class="form-control" />
+
+    <label asp-for="Center"> Name: </label>
+    <input asp-for="Center" class="form-control" />
+
+    <label asp-for="City"> Name: </label>
+    <input asp-for="City" class="form-control" />
+
+    <label asp-for="Time"> Name: </label>
+    <input asp-for="Time" class="form-control" />
+
+    <button class="btn btn-primary" type="submit"> Save</button>
+
+</form>
+
