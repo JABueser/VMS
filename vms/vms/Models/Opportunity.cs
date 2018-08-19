@@ -13,6 +13,5 @@ namespace vms.Models
         public string Center { get; set; }
         public string City { get; set; }
         public DateTime Time { get; set; }
-
     }
 }

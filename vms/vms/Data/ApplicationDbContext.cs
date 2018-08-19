@@ -14,8 +14,11 @@ namespace vms.Data
             : base(options)
         {
         }
+        
+        public DbSet<Volunteer> Volunteers { get; set; }
+        
         public DbSet<Opportunity> Opportunities { get; set; }
-
+        
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);

@@ -1,0 +1,69 @@
+﻿
+@{
+    ViewData["Title"] = "Edit";
+}
+
+@model Volunteer
+
+<h2>Edit</h2>
+
+<form asp-action="Edit" asp-controller="Volunteer" method="post">
+
+    <label asp-for="FirstName">Firstname:</label>
+    <input asp-for="FirstName" class="form-control" />
+
+    <label asp-for="LastName">Lastname:</label>
+    <input asp-for="LastName" class="form-control" />
+
+    <label asp-for="Username">Username:</label>
+    <input asp-for="Username" class="form-control" />
+
+    <label asp-for="Password">Password:</label>
+    <input asp-for="Password" class="form-control" />
+
+    <label asp-for="Centers">Centers:</label>
+    <input asp-for="Centers" class="form-control" />
+
+    <label asp-for="Skills">Skills:</label>
+    <input asp-for="Skills" class="form-control" />
+
+    <label asp-for="AvailableTimes">Available Times:</label>
+    <input asp-for="AvailableTimes" class="form-control" />
+
+    <label asp-for="Address">Address:</label>
+    <input asp-for="Address" class="form-control" />
+
+    <label asp-for="PhoneNumbers">Phone Numbers:</label>
+    <input asp-for="PhoneNumbers" class="form-control" />
+
+    <label asp-for="Email">Email:</label>
+    <input asp-for="Email" class="form-control" />
+
+    <label asp-for="EducationalBackground">Educational Background:</label>
+    <input asp-for="EducationalBackground" class="form-control" />
+
+    <label asp-for="CurrentLicenses">Current Licenses:</label>
+    <input asp-for="CurrentLicenses" class="form-control" />
+
+    <label asp-for="EmerContactName">Emergency Contact Name:</label>
+    <input asp-for="EmerContactName" class="form-control" />
+
+    <label asp-for="EmerPhoneNum">Emergency Phone Number:</label>
+    <input asp-for="EmerPhoneNum" class="form-control" />
+
+    <label asp-for="EmerEmail">Emergency Email:</label>
+    <input asp-for="EmerEmail" class="form-control" />
+
+    <label asp-for="IsDrivLicense"><input asp-for="IsDrivLicense" value="true" />Driver License Present</label>
+
+    <label asp-for="IsSocSec"><input asp-for="IsSocSec" value ="true" />Social Security</label>
+
+    <label asp-for="IsApproved"><input asp-for="IsApproved" value="true" />Approved</label>
+
+    <label asp-for="IsPending"><input asp-for="IsPending" value="true" />Pending</label>
+
+    <label asp-for="IsInactive"><input asp-for="IsInactive" value="true" />Inactive</label>
+
+    <button class="btn btn-primary" type="submit">Save</button>
+</form>
+

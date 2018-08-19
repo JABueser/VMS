@@ -11,9 +11,10 @@ using vms.Data;
 namespace vms.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180808161004_volunteerPendInac")]
+    partial class volunteerPendInac
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -229,26 +230,6 @@ namespace vms.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Volunteers");
-                });
-                
-            modelBuilder.Entity("vms.Models.Opportunity", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("Center");
-
-                    b.Property<string>("City");
-
-                    b.Property<string>("Description");
-
-                    b.Property<string>("Name");
-
-                    b.Property<DateTime>("Time");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Opportunities");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

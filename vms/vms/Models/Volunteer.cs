@@ -25,7 +25,7 @@ namespace vms.Models
         //[Required]
         public string Address { get; set; }
         //[Required]
-        public int PhoneNumbers { get; set; }
+        public string PhoneNumbers { get; set; }
         //[Required]
         public string Email { get; set; }
         //[Required]
@@ -35,7 +35,7 @@ namespace vms.Models
         //[Required]
         public string EmerContactName { get; set; }
         //[Required]
-        public int EmerPhoneNum { get; set; }
+        public string EmerPhoneNum { get; set; }
         //[Required]
         public string EmerEmail { get; set; }
         //[Required]
@@ -46,5 +46,9 @@ namespace vms.Models
         public bool IsSocSec { get; set; }
         //[Required]
         public bool IsApproved { get; set; }
+        //[Required]
+        public bool IsPending { get; set; }
+        //[Required]
+        public bool IsInactive { get; set; }
     }
 }
