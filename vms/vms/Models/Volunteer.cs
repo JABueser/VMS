@@ -35,7 +35,7 @@ namespace vms.Models
         //[Required]
         public string EmerContactName { get; set; }
         //[Required]
-        public int EmerPhoneNum { get; set; }
+        public string EmerPhoneNum { get; set; }
         //[Required]
         public string EmerEmail { get; set; }
         //[Required]

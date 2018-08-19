@@ -6,7 +6,7 @@ using vms.Models;
 
 namespace vms.Services
 {
-    public class FakeVolunteerRepository : IVolunteerService
+    public class FakeVolunteerRepository /*: IVolunteerService*/
     {
         public Task<Volunteer[]> GetIncompleteVolunteersAsync()
         {

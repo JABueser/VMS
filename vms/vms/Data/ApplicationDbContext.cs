@@ -14,6 +14,7 @@ namespace vms.Data
             : base(options)
         {
         }
+        public DbSet<Volunteer> Volunteers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

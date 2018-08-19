@@ -10,6 +10,9 @@ namespace vms.Services
     {
         Task<Volunteer[]> GetIncompleteVolunteersAsync();
 
-        //IEnumerable<Volunteer> Volunteers { get; }
+        void Save(Volunteer volunteer);
+
+        Volunteer Delete(Guid Id);
+
     }
 }
