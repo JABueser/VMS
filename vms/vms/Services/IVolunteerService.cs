@@ -9,5 +9,9 @@ namespace vms.Services
     public interface IVolunteerService
     {
         Task<Volunteer[]> GetIncompleteVolunteersAsync();
+
+        void Save(Volunteer volunteer);
+
+        Volunteer Delete(Guid Id);
     }
 }
