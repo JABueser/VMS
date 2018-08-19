@@ -68,6 +68,53 @@ namespace vms.Controllers
             }
             return Redirect("Index");
         }
+        
+        public async Task<IActionResult> Search(string LastName)
+        {
+            var volunteers = await _volunteerService.GetIncompleteVolunteersAsync();
 
+            var model = new VolunteerViewModel()
+            {
+                Volunteers = volunteers.Where(i => ((i.LastName == LastName))
+                           
+                            ).Cast<Volunteer>().ToArray()
+            };
+
+            return View(model);
+        }
+
+        public async Task<IActionResult> Filter(int status)
+        {
+            bool IsApproved = false;
+            bool IsPending = false;
+            bool IsInactive = false;
+            switch (status)
+            {
+                case 1:
+                    IsApproved = true;
+                    IsPending = true;
+                    break;
+                case 2:
+                    IsApproved = true;
+                    break;
+                case 3:
+                    IsPending = true;
+                    break;
+                case 4:
+                    IsApproved = false;
+                    break;
+                case 5:
+                    IsInactive = true;
+                    break;
+            }
+            var volunteers = await _volunteerService.GetIncompleteVolunteersAsync();
+
+            var model = new VolunteerViewModel()
+            {
+                Volunteers = volunteers.Where(i => (i.IsApproved == IsApproved && i.IsPending == IsPending && i.IsInactive == IsInactive)).Cast<Volunteer>().ToArray()
+            };
+
+            return View(model);
+        }
     }
 }
